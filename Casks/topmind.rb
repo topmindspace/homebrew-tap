@@ -2,8 +2,8 @@ cask "topmind" do
   arch arm: "arm64", intel: "x64"
 
   version "3.3.0"
-  sha256 arm:   "543e5ab76ba5b94c5fcc34877442f98296e8534bb0f8aee342f2faa1f0ccd7d0",
-         intel: "543e5ab76ba5b94c5fcc34877442f98296e8534bb0f8aee342f2faa1f0ccd7d0"
+  sha256 arm:   "b66e9b34e1e4b07072f3dad1cbc76e3b21b80a0a5de3a8d57e793194396a4ee4",
+         intel: "b66e9b34e1e4b07072f3dad1cbc76e3b21b80a0a5de3a8d57e793194396a4ee4"
 
   url "https://github.com/topmindspace/topmind/releases/download/v#{version}/topmind-#{version}-mac-#{arch}.dmg"
   name "Topmind Desktop"
