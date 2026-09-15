@@ -1,8 +1,8 @@
 cask "topmind" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.3.0"
-  sha256 arm:   "6bee783d399bd6d6f587682c934f0482b59fadf9e8a1984bcb818799740e430c",
+  version "4.4.0"
+  sha256 arm:   "4ec7ac77fcd48dd666ba12880f905fb0ddc2036e56d1bfa7999b939c65dd9074",
          intel: "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
 
   url "https://github.com/topmindspace/topmind/releases/download/v#{version}/topmind-#{version}-mac-#{arch}.dmg"
@@ -19,6 +19,7 @@ cask "topmind" do
 
   # Remove quarantine attribute automatically on install to solve macOS "damaged" gatekeeper error.
   # Homebrew requires postflight_steps (legacy postflight is deprecated).
+  # Must match electron-builder productName: DMG contains topmind.app.
   postflight_steps do
     run "/usr/bin/xattr",
         args: ["-rd", "com.apple.quarantine", "{{appdir}}/topmind.app"],
