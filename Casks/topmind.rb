@@ -1,11 +1,8 @@
 cask "topmind" do
-  arch arm: "arm64", intel: "x64"
+  version "4.5.0"
+  sha256 "49562f7c0a5d13ac72f9c6fcb945a0fcbe86af5927242dccfb037c7fec74cc36"
 
-  version "4.4.0"
-  sha256 arm:   "4ec7ac77fcd48dd666ba12880f905fb0ddc2036e56d1bfa7999b939c65dd9074",
-         intel: "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
-
-  url "https://github.com/topmindspace/topmind/releases/download/v#{version}/topmind-#{version}-mac-#{arch}.dmg"
+  url "https://github.com/topmindspace/topmind/releases/download/v#{version}/topmind-#{version}-mac-arm64.dmg"
   name "Topmind Desktop"
   desc "Local-first personal knowledge desktop workspace with stream and AI co-pilot"
   homepage "https://github.com/topmindspace/topmind"
