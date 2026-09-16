@@ -1,6 +1,6 @@
 cask "topmind" do
-  version "4.5.0"
-  sha256 "49562f7c0a5d13ac72f9c6fcb945a0fcbe86af5927242dccfb037c7fec74cc36"
+  version "4.6.0"
+  sha256 "cdcac6bc857d14da41e16391c258146d9c59bc5aa4c93c670b5e104d204830af"
 
   url "https://github.com/topmindspace/topmind/releases/download/v#{version}/topmind-#{version}-mac-arm64.dmg"
   name "Topmind Desktop"
@@ -14,9 +14,6 @@ cask "topmind" do
 
   auto_updates true
 
-  # Remove quarantine attribute automatically on install to solve macOS "damaged" gatekeeper error.
-  # Homebrew requires postflight_steps (legacy postflight is deprecated).
-  # Must match electron-builder productName: DMG contains topmind.app.
   postflight_steps do
     run "/usr/bin/xattr",
         args: ["-rd", "com.apple.quarantine", "{{appdir}}/topmind.app"],
@@ -25,8 +22,6 @@ cask "topmind" do
 
   app "topmind.app"
 
-  # Recovery hint when /Applications/topmind.app was moved/deleted and brew
-  # upgrade can no longer find the previous install target.
   caveats <<~EOS
     If brew upgrade fails with "App source '/Applications/topmind.app' is not there",
     the previous app was moved or deleted. Recover with:
