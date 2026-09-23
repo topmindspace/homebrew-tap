@@ -1,6 +1,6 @@
 cask "topmind" do
-  version "4.11.0"
-  sha256 "429c322d4abcd7775f35fb895ddb8b29fe3e37cac8d633744e3e1c7e6245c946"
+  version "4.12.2"
+  sha256 "24ad26cb1f77dc4f17f48ca2d02afd0e3179050f6a9c85011730b494dcb7558f"
 
   url "https://github.com/topmindspace/topmind/releases/download/v#{version}/topmind-#{version}-mac-arm64.dmg"
   name "Topmind Desktop"
